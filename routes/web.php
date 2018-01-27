@@ -11,11 +11,12 @@
 |
 */
 
+
+Route::get("/","Admin\AccessController@showLogin");
+
 Route::group(['prefix'=>'admin'], function(){
     Route::get('/login','Admin\Access\AccessController@loadLoginPage');
-
     Route::get('/register','Admin\Access\AccessController@loadRegisterPage');
-
     Route::get('/dashboard','Admin\Access\AccessController@loadDashboard');
 
 });
